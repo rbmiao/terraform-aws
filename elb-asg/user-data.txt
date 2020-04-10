@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mkdir -p /home/ec2-user/.ssh
+cat <<FILE > /home/ec2-user/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCLzU097/7/bCaSv/Dd7/uz+CfmtTzRc1U6IHEKWAxSyBKZSgE9sK9gmfMoUW82BdlO1EVn+NqMrm1M4KKanG+jjH6ITepohEN89cwMIjN9tEogP+pQteSWtNzIui2t/k4ghyziw/xMV0Aj9B4Rv5LE5POYHttdclrvxxZZwWOnw78X/6k0Rc9lO1uZ12EgbBGjq1PQyCGRXIfO6NO7t3KvtzVpq7fpAC+Lar2WR1ytpvqM4x/AU+N2at7meVn9Knd529aiDZqwW7pXqeLQNpklY8HHlkY4Lt1u70IQObhrVdQoGWp5JptVfPpTzgCOEEYLFt3lxLeFNEl6kOgEYAg9 user@host
+FILE
+
+chown ec2-user.ec2-user /home/ec2-user/.ssh/authorized_keys
+chmod 400 /home/ec2-user/.ssh/authorized_keys
+
+docker run -d -p 80:80 nginx
