@@ -1,12 +1,12 @@
 variable "access_key" {
   description = "Access key to login AWS."
-  default = "AKIAIGFUQUMOKT56CUDQ"
+  default = "YOURAWSACCESS_KEY"
 }
 
 
 variable "secret_key" {
   description = "Secret key to login AWS."
-  default = "/glj1JgpUbY4yBe0PxBn3NBENaO4DiDogvsNAQuT"
+  default = "YOURAWSSECRETKEY"
 }
 
 variable "region" {
