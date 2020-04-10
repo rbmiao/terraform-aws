@@ -6,4 +6,4 @@ Navigate to each directory, running "terraform init" to install aws plugin, then
 
 Login to newly created EC2 instance, key is ~/Downloads/04042020.pem
 
-# terraform-aws
+## credentials in variable.tf has been updated. 
